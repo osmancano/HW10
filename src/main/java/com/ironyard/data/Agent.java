@@ -26,7 +26,7 @@ public class Agent {
         Gson gson = new Gson();
         JsonParser jsonParser = new JsonParser();
         try {
-            BufferedReader br = new BufferedReader(new FileReader(Constants.jason_filename));
+            BufferedReader br = new BufferedReader(new FileReader(Agent.class.getClassLoader().getResource(Constants.jason_filename).getFile()));
             JsonElement jsonElement = jsonParser.parse(br);
 
             //Create generic type
